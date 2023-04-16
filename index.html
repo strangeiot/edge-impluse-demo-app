@@ -25,7 +25,7 @@
 
 </head>
 
-<body translate="no" onload="connect()">
+<body translate="no" >
 
     <div class="components" id="home">
         <div class="hello">
@@ -60,26 +60,48 @@
             <div class="exercise__names__armcircles">ARMCIRCLES<br><label id="todays_armcircles">0</label></div>
         </div>
 
-        <!--Weekly Stats-->
         <div class="weekly__main">
-            Weekly Activity
-        </div>
-        <div class="weekly__details">
+            <label for="pet-select">Weekly Activity</label>
+<select class="selectday" onchange="showDayActivity(this)" name="day" id="pet-select">
+    <option value="">Select a Day</option>
+    <option value="sunday">Sunday</option>
+    <option value="monday">Monday</option>
+    <option value="thuesday">Thuesday</option>
+    <option value="wednesday">Wednesday</option>
+    <option value="thursday">Thursday</option>
+    <option value="friday">Friday</option>
+    <option value="saturday">Saturday</option>
+</select>
+</div>
+
+
+      <!-- <div class="weekly__main">
+        <div class="weekday">
             <ion-icon name="arrow-forward-outline"></ion-icon>
         </div>
-        <div class="weekday mon" onclick="showDayActivity('monday')">
+        <div class="weekday" onclick="showDayActivity('sunday')">
+            <p>SUN</p>
+        </div>
+        <div class="weekday" onclick="showDayActivity('monday')">
             <p>MON</p>
         </div>
-        <div class="weekday tue" onclick="showDayActivity('tuesday')">
+        <div class="weekday" onclick="showDayActivity('tuesday')">
             <p>TUE</p>
         </div>
-        <div class="weekday wed" onclick="showDayActivity('wednesday')">
+        <div class="weekday" onclick="showDayActivity('wednesday')">
             <p>WED</p>
         </div>
-        <div class="weekday thu" onclick="showDayActivity('thursday')">
+        <div class="weekday" onclick="showDayActivity('thursday')">
             <p>THU</p>
         </div>
-
+        <div class="weekday" onclick="showDayActivity('friday')">
+            <p>FRI</p>
+        </div>
+        <div class="weekday" onclick="showDayActivity('saturday')">
+            <p>SAT</p>
+        </div>
+      </div> -->
+        
         <!--Navbar-->
         <div class="icon" id="navbar__home">
             <div class="icon__home">
@@ -116,17 +138,17 @@
                 <div class="exercise__name">ARMCIRCLES<br><label id="armcircles__count">0</label></div>
 
             </div>
-            <div class="activity__card" id="activity__situp">
+            <!-- <div class="activity__card" id="activity__situp">
                 <div class="exercise__name">SITUP<br><label id="situp__count">0</label></div>
 
-            </div>
-            <div class="activity__card" id="activity__pullup">
+            </div> -->
+            <!-- <div class="activity__card" id="activity__pullup">
                 <div class="exercise__name">PULLUP<br><label id="pullup__count">0</label></div>
 
-            </div>
-            <div class="activity__card" id="activity__planck">
+            </div> -->
+            <!-- <div class="activity__card" id="activity__planck">
                 <div class="exercise__name">PLANCK<br><label id="planck__count">0</label></div>
-            </div>
+            </div> -->
         </div>
 
         <div class="icon" id="navbar__activity">
@@ -195,7 +217,7 @@
                 <div class="exercise__name">ARMCIRCLES<br><label id="day__armcircles__count">0</label></div>
 
             </div>
-            <div class="activity__card" id="activity__situp">
+            <!-- <div class="activity__card" id="activity__situp">
                 <div class="exercise__name">SITUP<br><label id="day__situp__count">0</label></div>
 
             </div>
@@ -205,7 +227,7 @@
             </div>
             <div class="activity__card" id="activity__planck">
                 <div class="exercise__name">PLANCK<br><label id="day__planck__count">0</label></div>
-            </div>
+            </div> -->
         </div>
         <div class="icon" id="navbar__activity">
             <div class="icon__home">

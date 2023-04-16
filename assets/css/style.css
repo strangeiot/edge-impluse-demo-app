@@ -165,12 +165,18 @@ html {
     }
     .weekly__main {
         grid-column: 1/8;
-        grid-row: 6/6;
+        grid-row: 6/8;
         font-size: 1.6rem;
         font-family: "Poppins", sans-serif;
-        margin-top: -1rem;
+        /* margin-top: 10rem; */
         font-weight: 525;
+        display: grid;
+        flex-wrap: wrap;
+        /* grid-column-gap: 10%; */
+        grid-row-gap: 10px;
+
     }
+    
     .weekly__details {
         grid-column: 6/8;
         grid-row: 6/6;
@@ -179,12 +185,22 @@ html {
         margin-left: -5%;
         color: var(--primary-dark);
     }
+
+    .selectday{
+        border-radius: 10px;
+        border: none;
+        padding: 10px;
+        outline: none;
+        color: var(--primary);
+        background: var(--greyLight-1);
+        box-shadow:0.3rem 0.3rem 0.6rem var(--greyLight-2), -0.2rem -0.2rem 0.5rem var(--white);
+
+    }
     .weekday {
         width: 6rem;
         height: 7rem;
         border-radius: 10px;
         box-shadow: 0.3rem 0.3rem 0.6rem var(--greyLight-2), -0.2rem -0.2rem 0.5rem var(--white);
-        margin-top: 10rem;
         color: var(--primary);
     }
     .mon {
@@ -203,7 +219,7 @@ html {
         grid-column: 4/8;
         grid-row: 6/6;
     }
-    .mon p {
+    .weekday p {
         justify-items: center;
         font-size: 1.5rem;
         margin-left: 20%;

@@ -69,6 +69,7 @@ stopBtn.addEventListener('click', event => {
 });
 
 function showDayActivity(day) {
+    day=day.value
     var DayCountRef = firebase.database().ref(day + '/exercise');
     DayCountRef.on('value', (snapshot) => {
         var data = snapshot.val();
@@ -116,6 +117,7 @@ function connect() {
 
         }).catch(error => {
             log('Argh! ' + error);
+            alert(error)
         });
 
 }
@@ -165,7 +167,7 @@ function connectToBluetoothDevice(device) {
 }
 
 function requestDevice() {
-
+alert("started")
     let serviceUuid = "e267751a-ae76-11eb-8529-0242ac130003";
     if (serviceUuid.startsWith('0x')) {
         serviceUuid = parseInt(serviceUuid);
@@ -180,6 +182,8 @@ function requestDevice() {
         .then(device => {
             console.log("Chosen device: " + device.name);
             return connect()
+        }).catch((error)=>{
+            alert(error)
         })
 }
 
